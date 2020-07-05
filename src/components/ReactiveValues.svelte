@@ -1,5 +1,6 @@
 <script>
   import Modal from "./Modal.svelte";
+  import Button from "./Button.svelte";
   let showModal = false;
   const toggleModal = () => {
     showModal = !showModal;
@@ -9,8 +10,11 @@
 <style>
 
 </style>
-<Modal {showModal} on:click={toggleModal} message='Reactive Values' />
+
+<Modal {showModal} on:click={toggleModal} message="Reactive Values" />
 <div>
   <h1>Reactive Values</h1>
 </div>
-<button on:click={toggleModal}>Show Slide</button>
+<div class="btn-container">
+  <Button on:click={toggleModal}>Show Slide</Button>
+</div>

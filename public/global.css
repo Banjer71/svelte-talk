@@ -1,16 +1,22 @@
+
 * {
-  /* //border: 1px dashed green; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Raleway", sans-serif;
+}
+
 @media only screen and (min-width: 780px) {
   body {
     display: grid;
-    grid-template-columns: 1fr 1fr 10%;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: 1fr 1fr 10%; */
     background-image: none;
     height: 100vh;
+    overflow-x: hidden;
   }
 
   .fab {
@@ -25,7 +31,6 @@
   }
 
   h1 {
-    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 2rem;
     letter-spacing: 2px;
@@ -38,5 +43,9 @@
     margin-top: 1rem;
   }
 
-  
+  .btn-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
 }

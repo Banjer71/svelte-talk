@@ -1,3 +1,8 @@
+<script>
+  export let type = "primary";
+  export let secondary;
+</script>
+
 <style>
   button {
     border: 0;
@@ -35,6 +40,6 @@
   }
 </style>
 
-<button>
+<button on:click>
   <slot />
 </button>
