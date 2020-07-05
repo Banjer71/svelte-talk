@@ -1,17 +1,22 @@
 <script>
-import Modal from './Modal.svelte'
+  import Modal from "./Modal.svelte";
+  import Button from "./Button.svelte";
+
   let firstName = "";
   let lastName = "";
   let instrument = "";
 
-  let name = 'Dave'
-  let surname ='Nacky'
-  let favInstr = ''
+  let name = "Dave";
+  let surname = "Nacky";
+  let favInstr = "";
 
-let showModal = false;
+  let showModal = false;
   const toggleModal = () => {
     showModal = !showModal;
-  }
+  };
+
+  let fotoBind = "../../img/databinding.png";
+  let excel = "../../img/excel.jpg";
 
   $: fullname = `${name} ${surname}`; //reactive value
 
@@ -29,27 +34,59 @@ let showModal = false;
 </script>
 
 <style>
+  .excel {
+    margin: 20px;
+  }
 
+  .classic * {
+    padding: 10px;
+  }
+
+  .binding {
+    margin-top: 10px;
+  }
+
+  .binding * {
+    padding: 10px;
+  }
 </style>
-<!-- {#if instrument === 'banjo'}
-	<Modal {instrument} message='Check out our offer'/>
-    {:else if firstName.toLowerCase() === 'davide'}
-    <Modal {firstName}><p><a href="http://davidenaccarati.com">Davide Naccarati</a></p></Modal>
-{/if} -->
-<Modal {showModal} on:click={toggleModal} message='Binding data' />
-<div>
-  <p>{firstName} {lastName} plays {instrument}</p>
+
+<Modal
+  {showModal}
+  on:click={toggleModal}
+  message="Binding data"
+  modalPics={fotoBind} />
+<div class="excel">
+  <img src={excel} alt="excel grid" />
+  <p>
+    The idea of data binding was inspired by the the most reactive programs
+    ..the spreadsheet
+  </p>
+  <p>
+    when two cells are binded togheter to a third cell with a forumula 
+    , this allows us to keep track of their values updated indipendently.
+  </p>
+</div>
+<div class="classic">
+  <em>
+    Classic way to keep track of the values using different handler functions
+  </em>
+  <h4>{firstName} {lastName} plays {instrument}</h4>
   <input type="text" on:input={choosename} />
   <input type="text" on:input={chooseLa} />
   <input type="text" on:input={chooseInstrument} />
 </div>
 
-<div>
-  <h3>{fullname} plays: ${favInstr}</h3>
+<div class="binding">
+  <em>
+    a simple example od data binding in svelte inspired by the spreadsheet
+  </em>
+  <h4>{fullname} plays: {favInstr}</h4>
   <input type="text" bind:value={name} />
   <input type="text" bind:value={surname} />
   <input type="text" bind:value={favInstr} />
 </div>
-<button on:click={toggleModal}>Show Slide</button>
+<div class="btn-container">
+  <Button on:click={toggleModal}>Show Slide</Button>
 
-
+</div>

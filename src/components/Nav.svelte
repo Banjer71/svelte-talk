@@ -11,7 +11,8 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    outline: 1px dashed red;
+    margin-right: 100px;
+    /* outline: 1px dashed red; */
   }
 
   .navbar li a {

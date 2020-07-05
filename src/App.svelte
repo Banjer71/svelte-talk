@@ -9,16 +9,18 @@
   import ReactiveValues from "./components/ReactiveValues.svelte";
   import Components from "./components/Components.svelte";
   import FetchonMount from "./components/FetchOnmount.svelte";
+  import Intro from "./components/Intro.svelte";
 
   let items = [
+    "What is Svelte",
+    "Template Structure",
     "Binding Data",
-    "Rollup",
-    "Reactive Values",
     "Components",
     "Form",
     "Fetch and OnMount"
   ];
-  let showItem = "Binding Data";
+
+  let showItem = "What is Svelte";
 
   const handleArg = e => {
     showItem = e.detail;
@@ -41,7 +43,7 @@
 
   p {
     font-family: "Open Sans", sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: hsl(0, 0%, 50%);
     margin-top: 1rem;
   }
@@ -58,7 +60,8 @@
       grid-column: 2;
       grid-row: 1;
       padding: 150px 100px 0 50px;
-      overflow: hidden;
+      overflow-y: auto;
+
       margin-left: 40px;
     }
 
@@ -82,12 +85,12 @@
     library
   </p>
 
-  {#if showItem === 'Binding Data'}
-    <InputDataBinding />
-  {:else if showItem === 'Rollup'}
+  {#if showItem === 'What is Svelte'}
+    <Intro />
+  {:else if showItem === 'Template Structure'}
     <Rollup />
-  {:else if showItem === 'Reactive Values'}
-    <ReactiveValues />
+  {:else if showItem === 'Binding Data'}
+    <InputDataBinding />
   {:else if showItem === 'Components'}
     <Components />
   {:else if showItem === 'Form'}
@@ -96,7 +99,7 @@
     <FetchonMount />
   {/if}
 
-  <p class="privacy">
+  <!-- <p class="privacy">
     <a href="https://davidenaccarati.com" target="_blank">Davide Naccarati</a>
-  </p>
+  </p> -->
 </section>

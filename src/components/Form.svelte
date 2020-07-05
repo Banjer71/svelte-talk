@@ -1,6 +1,6 @@
 <script>
   import Button from "./Button.svelte";
-  import Modal from './Modal.svelte'
+  import Modal from "./Modal.svelte";
 
   let fields = {
     question: "",
@@ -11,13 +11,12 @@
   const submitHanlder = () => {
     let poll = { ...fields, votesA: 0, votesB: 0, id: Math.random() };
     dispatch("add", poll);
-    //console.log(fields);
   };
 
   let showModal = false;
   const toggleModal = () => {
     showModal = !showModal;
-  }
+  };
 </script>
 
 <style>
@@ -53,7 +52,8 @@
     }
   }
 </style>
-<Modal {showModal} on:click={toggleModal} message='Form' />
+
+<Modal {showModal} on:click={toggleModal} message="Form" />
 <form on:submit|preventDefault={submitHanlder}>
   <div class="form-field">
     <label for="question">Poll Question</label>
@@ -70,4 +70,6 @@
   <Button type="secondary" flat={true} inverse={true}>Add Poll</Button>
 </form>
 
-<button on:click={toggleModal}>Show Slide</button>
+<div class="btn-container">
+  <Button on:click={toggleModal}>Show Slide</Button>
+</div>

@@ -13,7 +13,7 @@
 </style>
 
 <header id="top">
- 
-  <slot></slot>
+
+  <slot />
 
 </header>
