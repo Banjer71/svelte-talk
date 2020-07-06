@@ -9,13 +9,10 @@
     showModal = !showModal;
   };
 
-  let component =
-    "Components can emit events using , or by forwarding DOM events. Listening for component events looks the same as listening for DOM events:";
 </script>
 
 <style>
   .component {
-    /* width: 100%; */
     margin-top: 25px;
   }
 
@@ -40,25 +37,25 @@
 <div class="component">
   <h1>Components</h1>
   <p>
-    Componets are the building blocks of the websites. They can be used and
-    reused more than one time and customized
+    Components are the building blocks of the websites. They can be used and
+    reused more than once and customized
   </p>
   <p>
-    A componet can be nested and renderd inside other components. So we can have
-    big components like Navbar , Sidebar or Footer that could contain other
-    small componets like cards or buttons
+    A component can be nested and renderd inside other components. So we can have
+    big components like Navbar, Sidebar or Footer that could contain other
+    small components like cards or buttons
   </p>
   <p>
     In Svelte we create components in the src folder, usually if the application
-    is a small one , we gather all the componets in the src folder, buit is a
-    good practice to create at least a components folder inside the src folder.
-    This allows us to keep organized the file structure.
+    is a small one, we gather all the components in the src folder, but it is a
+    good practice to create at least one components folder inside the src folder.
+    This allows to keep the file structure organized.
   </p>
   <p>
-    To create a component in Svelte, we create a new file named with a capitol
-    letter and with the extensione .svelte
+    To create a component in Svelte, we create a new file named with a capital
+    letter and with the extension .svelte
     <br />
-    The file jsut create will contain, a
+    The file just created will contain a &lt;script&gt; tag a &lt;style&gt; tag and the html elements
   </p>
 
 </div>

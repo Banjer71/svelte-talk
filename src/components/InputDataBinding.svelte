@@ -27,7 +27,7 @@
   $: {
     console.log(svelteName);
     svelteName.toLowerCase() === "davide"
-      ? alert("did call Davide?")
+      ? alert("Yes it's me")
       : console.log(svelteFullname);
   }
 
@@ -82,14 +82,13 @@
   modalPics={fotoBind} />
 
 <div class="excel">
-  <h1>Binding Data</h1>
+  <h1>Data Binding</h1>
   <img src={excel} alt="excel grid" />
   <p>
-    The idea of data binding was inspired by the the most reactive programs
-    ..the spreadsheet
+    The idea of data binding was inspired by the the most reactive programs...the spreadsheet
   </p>
   <p>
-    when two cells are binded togheter to a third cell with a forumula , this
+    when two cells are bound together to a third cell with a formula, this
     allows us to keep track of their values updated indipendently.
   </p>
 </div>
@@ -105,7 +104,7 @@
 
 <div class="binding">
   <em>
-    a simple example od data binding in svelte inspired by the spreadsheet
+    a simple example of data binding in svelte inspired by the spreadsheet
   </em>
   <h4>{svelteFullname} plays: {SvelteFavInstr}</h4>
   <input type="text" bind:value={svelteName} />

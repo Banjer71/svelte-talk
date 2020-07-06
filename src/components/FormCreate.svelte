@@ -1,6 +1,8 @@
 <script>
   import { createEventDispatcher } from "svelte";
   import Button from "./Button.svelte";
+  import Modal from "./Modal.svelte";
+
   const dispatch = createEventDispatcher();
 
   let name;
@@ -21,6 +23,13 @@
     console.log(name, lastname, age, genres, instrument);
     dispatch("addPerson", person);
   };
+
+  let showModal = false;
+  const toggleModal = () => {
+    showModal = !showModal;
+  };
+
+  let formComponent = "../../img/createformcomponent.png";
 </script>
 
 <style>
@@ -55,6 +64,8 @@
   }
 </style>
 
+<Modal {showModal} on:click={toggleModal} modalPics={formComponent} />
+
 <form on:submit|preventDefault={handleSubmit}>
   <input type="text" placeholder="name" bind:value={name} />
   <input type="text" placeholder="lastname" bind:value={lastname} />
@@ -75,6 +86,7 @@
     Jazz
   </div>
 
+
   <br />
   <label>Instruments</label>
   <select bind:value={instrument}>
@@ -87,3 +99,6 @@
 
   <Button type="secondary reverse">Add Person</Button>
 </form>
+<div class="btn-container">
+  <Button on:click={toggleModal} type="secondary">Show Form Code</Button>
+</div>

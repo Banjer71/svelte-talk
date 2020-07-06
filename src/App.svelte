@@ -8,13 +8,12 @@
   import Rollup from "./components/Roolup.svelte";
   import ReactiveValues from "./components/ReactiveValues.svelte";
   import Components from "./components/Components.svelte";
-  import FetchonMount from "./components/FetchOnmount.svelte";
   import Intro from "./components/Intro.svelte";
 
   let items = [
     "What is Svelte",
     "Template Creation",
-    "Binding Data",
+    "Data Binding",
     "Components",
     "Form"
   ];
@@ -56,14 +55,12 @@
     <Intro />
   {:else if showItem === 'Template Creation'}
     <Rollup />
-  {:else if showItem === 'Binding Data'}
+  {:else if showItem === 'Data Binding'}
     <InputDataBinding />
   {:else if showItem === 'Components'}
     <Components />
   {:else if showItem === 'Form'}
     <Form />
-  {:else if showItem === 'Fetch and OnMount'}
-    <FetchonMount />
   {/if}
 
 </section>

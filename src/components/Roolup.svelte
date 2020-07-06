@@ -48,23 +48,22 @@
   message="Rollup config file"
   modalPics={fotoBind} />
 <div class="conf">
-  <h1>Template , setting and configurations</h1>
+  <h1>Template, setting and configurations</h1>
   <p>
-    ...to create a new application we need to install a svelte/template that
+    ...to create a new application we need to install a sveltejs/template that
     downloads all the files and folders to start our app.
     <br />
-    The structure is very similar to other framework like React, but the size is
+    The structure is very similar to other frameworks like React, but the size is
     lighter than the others.
   </p>
   <p>
     If we also run npm install to grab all the modules folders, we will notice
-    that the size of the application is really less heavy than the one created
+    that the size of the application is much less heavy than the one created
     with create-react-app
   </p>
   <img src={install} alt="install pics" />
   <p>
-    The rollup.config.js file is basically the webpack file in React. Click on
-    the Show Slide button
+    The rollup.config.js file is basically the webpack file in React. 
   </p>
 </div>
 <div class="btn-container">
