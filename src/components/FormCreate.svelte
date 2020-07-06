@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-import Button from './Button.svelte'
+  import Button from "./Button.svelte";
   const dispatch = createEventDispatcher();
 
   let name;
@@ -28,9 +28,8 @@ import Button from './Button.svelte'
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    width: 450px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 5rem 0;
   }
 
   .fav-music {
@@ -41,11 +40,18 @@ import Button from './Button.svelte'
   }
 
   select {
-      padding: 5px;
+    padding: 5px;
   }
 
   input {
-      padding: 5px;
+    padding: 5px;
+    margin: 4px;
+  }
+
+  @media screen and (min-width: 780px) {
+    form {
+      width: 450px;
+    }
   }
 </style>
 

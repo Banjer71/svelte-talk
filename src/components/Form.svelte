@@ -3,7 +3,7 @@
   import Button from "./Button.svelte";
   import Modal from "./Modal.svelte";
   import Form from "./FormCreate.svelte";
-  import Card from './Card.svelte'
+  import Card from "./Card.svelte";
 
   const dispatch = createEventDispatcher();
 
@@ -54,22 +54,26 @@
   }
 </style>
 
-<Modal {showModal} on:click={toggleModal} message="Form"><div class="person">
-  {#each people as person}
-  
-    
-  <Card name={person.name} lastname={person.lastname} age={person.age} instrument={person.instrument}>{#if person.genres}
-  {#each person.genres as genre}
-    <li>{genre}</li>
-  {/each}
-  {/if}
-  </Card>
-  {/each}
+<Modal {showModal} on:click={toggleModal} message="Form">
+  <div class="person">
+    {#each people as person}
+      <Card
+        name={person.name}
+        lastname={person.lastname}
+        age={person.age}
+        instrument={person.instrument}>
+        {#if person.genres}
+          {#each person.genres as genre}
+            <li>{genre}</li>
+          {/each}
+        {/if}
+      </Card>
+    {/each}
 
-</div></Modal>
+  </div>
+</Modal>
 
 <Form on:addPerson={addPerson} />
-
 
 <div class="btn-container">
   <Button on:click={toggleModal}>Show Slide</Button>

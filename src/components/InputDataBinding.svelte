@@ -45,6 +45,9 @@
 </script>
 
 <style>
+  h1 {
+    margin-bottom: 1rem;
+  }
   .excel {
     margin: 20px;
   }
@@ -60,6 +63,16 @@
   .binding * {
     padding: 10px;
   }
+
+  input {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 780px) {
+    input {
+      width: auto;
+    }
+  }
 </style>
 
 <Modal
@@ -69,6 +82,7 @@
   modalPics={fotoBind} />
 
 <div class="excel">
+  <h1>Binding Data</h1>
   <img src={excel} alt="excel grid" />
   <p>
     The idea of data binding was inspired by the the most reactive programs

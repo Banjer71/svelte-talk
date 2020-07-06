@@ -7,16 +7,10 @@
 </script>
 
 <style>
-  .list {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-  }
-
   .list-args li {
     margin: 5px;
     padding: 5px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: #efefef;
     font-family: "Open Sans", sans-serif;
     cursor: pointer;
@@ -24,6 +18,18 @@
 
   .active {
     color: black;
+  }
+
+  @media screen and (min-width: 780px) {
+    .list {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .list-args li {
+      font-size: 1.2rem;
+    }
   }
 </style>
 

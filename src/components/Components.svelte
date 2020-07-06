@@ -14,11 +14,30 @@
 </script>
 
 <style>
+  .component {
+    /* width: 100%; */
+    margin-top: 25px;
+  }
 
+  h1 {
+    margin: 1rem auto;
+    padding: 10px;
+  }
+
+  p {
+    margin: 1rem 0;
+    padding: 10px;
+  }
+
+  @media screen and (min-width: 780px) {
+    .component {
+      max-width: 800px;
+    }
+  }
 </style>
 
-<Modal {showModal} on:click={toggleModal} modalPics={reusabelCom}/>
-<div>
+<Modal {showModal} on:click={toggleModal} modalPics={reusabelCom} />
+<div class="component">
   <h1>Components</h1>
   <p>
     Componets are the building blocks of the websites. They can be used and
@@ -31,7 +50,7 @@
   </p>
   <p>
     In Svelte we create components in the src folder, usually if the application
-    is a small one , we gahter all the componets in the src folder, buit is a
+    is a small one , we gather all the componets in the src folder, buit is a
     good practice to create at least a components folder inside the src folder.
     This allows us to keep organized the file structure.
   </p>

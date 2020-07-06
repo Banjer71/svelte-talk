@@ -12,7 +12,33 @@
 
 <style>
   .conf {
+    width: 100%;
     margin-top: 25px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h1 {
+    margin: 1rem auto;
+    padding: 10px;
+  }
+
+  p {
+    margin: 1rem 0;
+    padding: 10px;
+  }
+
+  .conf img {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: 780px) {
+    .conf {
+      max-width: 800px;
+    }
+
+    .conf p {
+      margin: 2rem auto;
+    }
   }
 </style>
 
