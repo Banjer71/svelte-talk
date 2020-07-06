@@ -46,6 +46,7 @@
       <img src={modalPics} alt="codice" width="800"/>
     {:else}
       <div class="modal">
+      <slot></slot>
         <ul class='modal-list'>
           {@html message}
         </ul>
@@ -53,3 +54,4 @@
     {/if}
   </div>
 {/if}
+

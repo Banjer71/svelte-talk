@@ -13,7 +13,7 @@
 
   let items = [
     "What is Svelte",
-    "Template Structure",
+    "Template Creation",
     "Binding Data",
     "Components",
     "Form",
@@ -87,7 +87,7 @@
 
   {#if showItem === 'What is Svelte'}
     <Intro />
-  {:else if showItem === 'Template Structure'}
+  {:else if showItem === 'Template Creation'}
     <Rollup />
   {:else if showItem === 'Binding Data'}
     <InputDataBinding />
@@ -99,7 +99,4 @@
     <FetchonMount />
   {/if}
 
-  <!-- <p class="privacy">
-    <a href="https://davidenaccarati.com" target="_blank">Davide Naccarati</a>
-  </p> -->
 </section>
