@@ -10,13 +10,7 @@
   import Components from "./components/Components.svelte";
   import Intro from "./components/Intro.svelte";
 
-  let items = [
-    "What is Svelte",
-    "Template Creation",
-    "Data Binding",
-    "Components",
-    "Form"
-  ];
+  export let items;
 
   let showItem = "What is Svelte";
 

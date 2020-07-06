@@ -12,6 +12,7 @@
   let text = `<li style='padding: 10px'>Svelte is a new framework with the same goal as React, Angular or Vue, with the purpose of building front end applications...actually it is not a framework but a compiler.</li>
   <li style='padding: 10px'>Svelte compiles components during the build step and allows to load a single bundle.js on our page to render our application.</li>
   <img src='../../img/compiler.jpg' alt='compiler' width=200/>
+  <li style='padding: 10px'>You can build your entire app with Svelte, or you can add it incrementally to an existing codebase.</li>
   <li style='padding: 10px'>It doesn't use a Virtual DOM, so we don't have to wait for our components to be rendered from the virtual Dom to the real DOM</li>
   <li style='padding: 10px'>These things make Svelte one of the fastest "Compiler..framework" nowadays</li>`;
 </script>
@@ -69,11 +70,14 @@
 <div class="intro">
   <h1>What is Svelte</h1>
   <p>
-    <strong>...50th years ago the umanity</strong>
+    <strong>
+      ...50th years ago the umanity entered a new era.....I am talking of course
+      about spreadsheet!!
+    </strong>
   </p>
   <p>
-    These are the first words from Rich Harris speech during last year conference
-    about Svelte
+    These are the first words from Rich Harris speech during last year
+    conference about Svelte
   </p>
   <p>It is very interesting and highly recommended to watch.</p>
   <Modal {showModal} on:click={toggleModal} message={text} />
