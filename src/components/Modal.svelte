@@ -18,14 +18,14 @@
   }
 
   .modal {
-    width: 90%;
+    width: 100%;
     border-radius: 5px;
     padding: 20px;
     margin: 15px auto;
     background-color: #ff5500;
     text-align: left;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-family: "Open Sans", sans-serif;
   }
 
@@ -36,17 +36,31 @@
   img {
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
-  
+
+  @media only screen and (min-width: 780px) {
+    .modal {
+      width: 800px;
+      font-size: 1.2rem;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 800px;
+    }
+  }
 </style>
 
 {#if showModal}
   <div class="backdrop" class:promo={isPromo} on:click>
     {#if modalPics}
-      <img src={modalPics} alt="codice" width="800"/>
+      <img src={modalPics} alt="codice" width="800" />
     {:else}
       <div class="modal">
-        <ul class='modal-list'>
+        <slot />
+        <ul class="modal-list">
           {@html message}
         </ul>
       </div>

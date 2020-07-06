@@ -11,8 +11,6 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    margin-right: 100px;
-    /* outline: 1px dashed red; */
   }
 
   .navbar li a {
@@ -26,7 +24,7 @@
   }
 
   nav img {
-    width: 100px;
+    width: 50px;
     margin: 10px;
   }
 
@@ -35,6 +33,15 @@
       grid-row: 1;
       grid-column: 2/3;
       margin: 0;
+    }
+
+    nav img {
+      width: 100px;
+      margin: 10px;
+    }
+
+    .navbar {
+      margin-right: 100px;
     }
   }
 </style>

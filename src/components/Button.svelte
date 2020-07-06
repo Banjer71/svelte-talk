@@ -1,6 +1,5 @@
 <script>
   export let type = "primary";
-  export let secondary;
 </script>
 
 <style>
@@ -14,32 +13,28 @@
   }
 
   .primary {
-    background: #d91b42;
+    background: #ff5500;
     color: white;
   }
 
   .secondary {
-    background: #45c496;
+    background: #456dc4;
     color: white;
-  }
-
-  .flat {
-    box-shadow: none;
   }
 
   .primary.inverse {
     background: #fff;
-    color: #d91b42;
-    border: 2px solid #d91b42;
+    color: #ff5500;
+    border: 2px solid #ff5500;
   }
 
   .secondary.inverse {
-    color: #45c496;
     background: #fff;
-    border: 2px solid #45c496;
+    color: #456dc4;
+    border: 2px solid #456dc4;
   }
 </style>
 
-<button on:click>
+<button class={type} on:click>
   <slot />
 </button>

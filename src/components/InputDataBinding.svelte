@@ -2,13 +2,15 @@
   import Modal from "./Modal.svelte";
   import Button from "./Button.svelte";
 
+  //classic way
   let firstName = "";
   let lastName = "";
   let instrument = "";
 
-  let name = "Dave";
-  let surname = "Nacky";
-  let favInstr = "";
+  //svelte binding data way
+  let svelteName = "Dave";
+  let SvelteSurname = "Nacky";
+  let SvelteFavInstr = "";
 
   let showModal = false;
   const toggleModal = () => {
@@ -18,7 +20,16 @@
   let fotoBind = "../../img/databinding.png";
   let excel = "../../img/excel.jpg";
 
-  $: fullname = `${name} ${surname}`; //reactive value
+  //reactive value
+  $: svelteFullname = `${svelteName} ${SvelteSurname}`;
+
+  //ractive statement
+  $: {
+    console.log(svelteName);
+    svelteName.toLowerCase() === "davide"
+      ? alert("did call Davide?")
+      : console.log(svelteFullname);
+  }
 
   const chooseInstrument = e => {
     instrument = e.target.value;
@@ -34,6 +45,9 @@
 </script>
 
 <style>
+  h1 {
+    margin-bottom: 1rem;
+  }
   .excel {
     margin: 20px;
   }
@@ -49,6 +63,16 @@
   .binding * {
     padding: 10px;
   }
+
+  input {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 780px) {
+    input {
+      width: auto;
+    }
+  }
 </style>
 
 <Modal
@@ -56,15 +80,17 @@
   on:click={toggleModal}
   message="Binding data"
   modalPics={fotoBind} />
+
 <div class="excel">
+  <h1>Binding Data</h1>
   <img src={excel} alt="excel grid" />
   <p>
     The idea of data binding was inspired by the the most reactive programs
     ..the spreadsheet
   </p>
   <p>
-    when two cells are binded togheter to a third cell with a forumula 
-    , this allows us to keep track of their values updated indipendently.
+    when two cells are binded togheter to a third cell with a forumula , this
+    allows us to keep track of their values updated indipendently.
   </p>
 </div>
 <div class="classic">
@@ -81,10 +107,10 @@
   <em>
     a simple example od data binding in svelte inspired by the spreadsheet
   </em>
-  <h4>{fullname} plays: {favInstr}</h4>
-  <input type="text" bind:value={name} />
-  <input type="text" bind:value={surname} />
-  <input type="text" bind:value={favInstr} />
+  <h4>{svelteFullname} plays: {SvelteFavInstr}</h4>
+  <input type="text" bind:value={svelteName} />
+  <input type="text" bind:value={SvelteSurname} />
+  <input type="text" bind:value={SvelteFavInstr} />
 </div>
 <div class="btn-container">
   <Button on:click={toggleModal}>Show Slide</Button>
