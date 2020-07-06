@@ -49,17 +49,17 @@
 <nav>
   <ul class="navbar">
     <li>
-      <a href="#logo">
+      <a href="https://svelte-mytalk.netlify.app/">
         <img src={logo} alt={`${logo} logo`} />
       </a>
     </li>
     <li>
-      <a href="#twitter">
+      <a href="https://twitter.com/Banjerkid" target="_blank">
         <i class="fab fa-twitter" />
       </a>
     </li>
     <li>
-      <a href="#facebook">
+      <a href="https://www.facebook.com/davidenaccarati" target="_blank">
         <i class="fab fa-facebook" />
       </a>
     </li>
